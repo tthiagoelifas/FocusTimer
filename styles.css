@@ -1,0 +1,115 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root{
+  font-size: 62.5%;
+
+  --bg-primery: #FFFFFF;
+  --bg-cards: hsla(240, 9%, 89%, 1);
+  --bg-select-button: hsla(194, 97%, 31%, 1);
+  --ct-text: hsla(240, 6%, 21%, 1);
+
+  --ff-font: 'Roboto', sans-serif; 
+}
+
+body{
+  background: var(--bg-primery);
+}
+
+main{
+  height: 100vh;
+
+  display: flex;
+  justify-content:  space-evenly;
+  align-items: center;
+
+}
+
+.timer{
+  width: 32,1rem;
+  height: 21,3rem;
+}
+.clock{
+  margin-bottom: 1.7rem;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  height: 4.8rem;
+  gap: 4rem;
+  
+}
+.buttons button {
+  border: none;
+}
+.buttons button img{
+  object-fit: cover;
+}
+
+.clock h1{
+  font-family: var(--ff-font);
+  font-weight: 500;
+
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+}
+
+button{
+  background: var(--bg-primery);
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+
+  max-width: 30.8rem;
+  height: 33.6rem;
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+
+  padding: 4.8rem 4.1rem;
+  border-radius: 2.4rem;
+  border: none;
+
+  width: 13.8rem ;
+  height: 15.2rem;
+  background: var(--bg-cards);
+
+}
+
+.selectCard{
+  background: var(--bg-select-button);
+}
+
+.selectCard svg path{
+  fill:#FFFFFF;
+}
+
+
+
+
+@media (max-width: 767px){
+  /* Arrumar o text height e os cards */
+  main{
+    display: flex;
+    flex-direction: column;
+  }
+  .timer{
+    margin-bottom: 3.2rem;
+  }
+  .h1{
+    display: flex;
+    flex-wrap: wrap; 
+  }
+  .buttons{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
