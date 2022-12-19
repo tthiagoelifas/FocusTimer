@@ -1,10 +1,13 @@
-let treeSound = new Audio('./Sounds/Floresta.wav')
-let rainSound = new Audio('./Sounds/Chuva.wav')
-let coffeeSound = new Audio('./Sounds/Cafeteria.wav')
-let fireSound = new Audio('./Sounds/Lareira.wav')
+import { volumeTree, volumeRain, volumeCoffee, volumeFire } from "./elements.js"
+
+export let treeSound = new Audio('./Sounds/Floresta.wav')
+export let rainSound = new Audio('./Sounds/Chuva.wav')
+export let coffeeSound = new Audio('./Sounds/Cafeteria.wav')
+export let fireSound = new Audio('./Sounds/Lareira.wav')
 export function playTreeSound(){
   treeSound.play()
   treeSound.loop = true
+  treeSound.volume = volumeTree.value
 }
 export function pauseTreeSound(){  
   treeSound.pause()
@@ -12,6 +15,7 @@ export function pauseTreeSound(){
 export function playRainSound(){
   rainSound.play()
   rainSound.loop = true
+  rainSound.volume = volumeRain.value
 }
 export function pauseRainSound(){  
   rainSound.pause()
@@ -19,6 +23,7 @@ export function pauseRainSound(){
 export function playCoffeeSound(){
   coffeeSound.play()
   coffeeSound.loop = true
+  coffeeSound.volume = volumeCoffee.value
 }
 export function pauseCoffeeSound(){  
   coffeeSound.pause()
@@ -26,6 +31,7 @@ export function pauseCoffeeSound(){
 export function playFireSound(){
   fireSound.play()
   fireSound.loop = true
+  fireSound.volume = volumeFire.value
 }
 export function pauseFireSound(){  
   fireSound.pause()

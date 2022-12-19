@@ -10,8 +10,18 @@
   --bg-cards: hsla(240, 9%, 89%, 1);
   --bg-select-button: hsla(194, 97%, 31%, 1);
   --ct-text: hsla(240, 6%, 21%, 1);
+  --cf-svg: #323238;
+  --cf-select-svg: #FFFFFF;
 
   --ff-font: 'Roboto', sans-serif; 
+}
+
+.dark{
+  --bg-primery: hsla(240, 5%, 7%, 1);
+  --bg-cards: #29292E;
+  --bg-select-button: #0A3442;
+  --ct-text: #FFFFFF; 
+  --cf-svg: #C4C4CC;
 }
 
 body{
@@ -22,7 +32,7 @@ main{
   height: 100vh;
 
   display: flex;
-  justify-content:  space-evenly;
+  justify-content: space-evenly;
   align-items: center;
 
 }
@@ -35,6 +45,10 @@ main{
   margin-bottom: 1.7rem;
 }
 
+h1 span{
+  color: var(--ct-text);
+}
+
 .buttons{
   display: flex;
   justify-content: space-around;
@@ -44,10 +58,16 @@ main{
 }
 .buttons button {
   border: none;
-}
-.buttons button img{
   object-fit: cover;
 }
+.buttons button:hover{
+  cursor: pointer;
+}
+
+.buttons button svg path{
+  fill: var(--cf-svg);
+}
+
 
 .clock h1{
   font-family: var(--ff-font);
@@ -72,11 +92,12 @@ button{
 
 .card{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
-  padding: 4.8rem 4.1rem;
-  border-radius: 2.4rem;
+ 
   border: none;
+  border-radius: 2.4rem;
 
   width: 13.8rem ;
   height: 15.2rem;
@@ -84,12 +105,70 @@ button{
 
 }
 
+.card svg path{
+  fill: var(--cf-svg);
+}
+
+.card-image{
+  width: 13.8rem;
+  padding-top: 2.4rem;
+  padding-bottom: 3.2rem;
+}
+
+.card-image:hover{
+  cursor: pointer;
+}
+
 .selectCard{
   background: var(--bg-select-button);
 }
 
 .selectCard svg path{
-  fill:#FFFFFF;
+  fill: var(--cf-select-svg);
+}
+
+.selectCard .volume-control[type="range"]{
+  background: var(--cf-select-svg);
+}
+.selectCard .volume-control[type="range"]::-webkit-slider-thumb{
+  background-color: var(--cf-select-svg);
+}
+
+
+.viewMode{
+  position: absolute;
+  right: 6rem;
+  top: 6rem;
+  border: none;
+}
+
+.hidden{
+  display: none;
+}
+
+.volume-control{
+  width: 9rem;
+  outline: 4rem;
+}
+.volume-control:hover{
+  cursor: pointer;
+}
+
+.volume-control[type="range"] {
+  appearance: none;
+
+  height: 4px;
+
+  background: var(--cf-svg);
+  border-radius: 5px;
+}
+.volume-control[type="range"]::-webkit-slider-thumb{
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+
+  background: var(--cf-svg);
 }
 
 
@@ -111,5 +190,10 @@ button{
   .buttons{
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .viewMode{
+    right: 1rem;
+    top: 1rem;
   }
 }
