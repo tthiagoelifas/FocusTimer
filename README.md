@@ -22,4 +22,7 @@ Projeto de um temporizado pomodoro onde além de ter todas a funcinalidades de u
 ![preview](./preview.png)
 
 
-https://tthiagoelifas.github.io/FocusTimer/
+## Site do Projeto
+
+
+[Link do Projeto](https://tthiagoelifas.github.io/FocusTimer/)
